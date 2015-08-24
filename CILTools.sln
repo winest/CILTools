@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "cscript", "C:\Windows\System32\cscript.exe", "{D8353292-E2B3-45F0-A3C1-E33560D85AF6}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Windows\System32\cscript.exe
+		RemoteMachine = WINEST-HOME
+		StartingDirectory = F:\Code\JScript\Complete\CILTools
+		Arguments = "Main.bat" //D //Nologo //E:JScript
+		Environment = Default
+		LaunchingEngine = f200a7e7-dea5-11d0-b854-00a0244a1de2
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{651B16E2-F9E6-4123-BE92-C286577779D2}"
+	ProjectSection(SolutionItems) = preProject
+		AutoUpgrade.js = AutoUpgrade.js
+		..\..\_Include\CWUtils\Windows\CWFile.js = ..\..\_Include\CWUtils\Windows\CWFile.js
+		..\..\_Include\CWUtils\Windows\CWShell.js = ..\..\_Include\CWUtils\Windows\CWShell.js
+		..\..\_Include\CWUtils\Windows\CWXmlHttp.js = ..\..\_Include\CWUtils\Windows\CWXmlHttp.js
+		Diff.js = Diff.js
+		FixOffset.js = FixOffset.js
+		Main.bat = Main.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8353292-E2B3-45F0-A3C1-E33560D85AF6}.Debug|x64.ActiveCfg = Debug
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
