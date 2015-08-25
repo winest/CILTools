@@ -8,8 +8,8 @@ Main features:<br />
   3. Show the difference of two *.il files except comments and renamed variables<br />
   4. Auto-merge *.il files if there is no difference between the same method. This is useful to merge your modification after the original *.il files updated while your intereting functions are not changed<br />
 
-Please also download CWUtils for this utility to work.<br />
-To fix the include/reference path of CWUtils, you can use JsTools to change them automatically.<br />
+Please also download [CWUtils] (https://github.com/winest/CWUtils) for this utility to work.<br />
+To fix the include/reference path of CWUtils, you can use [JsTools] (https://github.com/winest/JsTools) to change them automatically or modify the path in Main.bat manually.<br />
  
 ## Author
 [ChienWei Hung] (https://www.linkedin.com/profile/view?id=351402223)
