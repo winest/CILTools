@@ -16,7 +16,7 @@ function FixOffset( aSrcPath , aDstPath , aStartLine , aStopLine , aOffset , aLo
     }
     CWUtils.DbgMsg( "INFO" , "FixOffset" , "Converting: " + aSrcPath + " => " + aDstPath , aLogFolder );
 
-    var rePtn = /^(\s*IL_)([a-fA-F0-9]+)(:[\s]+[^\s]+[\s]*)((IL_)([a-fA-F0-9]+)|(.*))$/
+    var rePtn = /^(\s*IL_)([a-fA-F0-9]+)((:[\s]+?[^\s]+[\s]*)((IL_)([a-fA-F0-9]+)|(.*))|,\s*|\)\s*)$/
     var nCurrLine = 0;
     while ( ! fileSrc.AtEndOfStream() )
     {
@@ -48,22 +48,22 @@ function FixOffset( aSrcPath , aDstPath , aStartLine , aStopLine , aOffset , aLo
                 uLineAddr = CWUtils.Padding( (uLineAddr + aOffset).toString(16) , 4 , "0" );
             
                 var strNewLine;
-                if ( 8 == aryLine.length )
+                if ( 9 == aryLine.length )
                 {
-                    if ( 0 < aryLine[5].length )
+                    if ( aryLine[6] == "IL_" )
                     {
-                        var uCodeAddr = parseInt( aryLine[6] , 16 ) || -1;
+                        var uCodeAddr = parseInt( aryLine[7] , 16 ) || -1;
                         if ( -1 == uCodeAddr )
                         {
                             CWUtils.DbgMsg( "ERRO" , "FixOffset" , "Address parsing error. uCodeAddr=" + uCodeAddr + ", strLine=" + strLine , aLogFolder );
                             break;
                         }
                         uCodeAddr = CWUtils.Padding( (uCodeAddr + aOffset).toString(16) , 4 , "0" );
-                        strNewLine = aryLine[1] + uLineAddr + aryLine[3] + aryLine[5] + uCodeAddr;
+                        strNewLine = aryLine[1] + uLineAddr + aryLine[4] + aryLine[6] + uCodeAddr;
                     }
                     else
                     {
-                        strNewLine = aryLine[1] + uLineAddr + aryLine[3] + aryLine[7];
+                        strNewLine = aryLine[1] + uLineAddr + aryLine[3];
                     }
                 }
                 else

@@ -162,6 +162,26 @@
     IL_0006:  ret
   } // end of method AIController::.ctor
 
+  .method public hidebysig newslot virtual final 
+            instance void  TestSwitch() cil managed
+  {
+    // 
+    .maxstack  14
+    .locals init (uint32 V_0,
+             bool V_1)
+    IL_0000:  ldarg.0
+    IL_0006:  stloc.0
+    IL_0007:  ldarg.0
+    IL_0008:  ldc.i4.m1
+    IL_000e:  ldloc.0
+    IL_000f:  switch     ( 
+                          IL_0000,
+                          IL_0007)
+    IL_001c:  br         IL_00b4
+
+    IL_00b4:  ret
+  } // end of method AIController::TestSwitch
+    
   .method public hidebysig newslot virtual 
           instance void  OnEnter() cil managed
   {

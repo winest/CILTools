@@ -46,7 +46,7 @@ for ( ;; )
             var strDllPath = CWUtils.SelectFile( "Please enter the dll file path:" );
             var strILPath = WshFileSystem.GetParentFolderName( strDllPath ) + "\\" + WshFileSystem.GetBaseName( strDllPath ) + ".il";
             var execObj = CWUtils.Exec( "\"" + WshShell.CurrentDirectory + "\\_Tools\\4.0\\ildasm.exe\" \"" + strDllPath + "\" /OUT=\"" + strILPath + "\" /UTF8" , true );
-            //WScript.Echo( "\"" + WshShell.CurrentDirectory + "\\_Tools\\4.0\\ildasm.exe\" \"" + strDllPath + "\" /OUT=\"" + strILPath + "\" /UTF8" );
+            WScript.Echo( "\"" + WshShell.CurrentDirectory + "\\_Tools\\4.0\\ildasm.exe\" \"" + strDllPath + "\" /OUT=\"" + strILPath + "\" /UTF8" );
             if ( 0 == execObj.ExitCode )
             {
                 WScript.Echo( "Conversion succeed" );
@@ -63,7 +63,7 @@ for ( ;; )
             var strDllPath = WshFileSystem.GetParentFolderName( strILPath ) + "\\" + WshFileSystem.GetBaseName( strILPath ) + ".dll";
             var strResPath = WshFileSystem.GetParentFolderName( strILPath ) + "\\" + WshFileSystem.GetBaseName( strILPath ) + ".res";
             var execObj = CWUtils.Exec( "\"" + WshShell.CurrentDirectory + "\\_Tools\\4.0\\ilasm.exe\" /DLL /OUTPUT=\"" + strDllPath + "\" /RESOURCE=\"" + strResPath + "\" \"" + strILPath + "\"" , true );
-            //WScript.Echo( "\"" + WshShell.CurrentDirectory + "\\_Tools\\4.0\\ilasm.exe\" /DLL /OUTPUT=\"" + strDllPath + "\" /RESOURCE=\"" + strResPath + "\" \"" + strILPath + "\"" );
+            WScript.Echo( "\"" + WshShell.CurrentDirectory + "\\_Tools\\4.0\\ilasm.exe\" /DLL /OUTPUT=\"" + strDllPath + "\" /RESOURCE=\"" + strResPath + "\" \"" + strILPath + "\"" );
             if ( 0 == execObj.ExitCode )
             {
                 WScript.Echo( "Conversion succeed" );

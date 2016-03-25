@@ -17,9 +17,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{651B16E2-F9E6-4123-BE92-C286577779D2}"
 	ProjectSection(SolutionItems) = preProject
 		AutoUpgrade.js = AutoUpgrade.js
-		..\..\_Include\CWUtils\Windows\CWFile.js = ..\..\_Include\CWUtils\Windows\CWFile.js
-		..\..\_Include\CWUtils\Windows\CWShell.js = ..\..\_Include\CWUtils\Windows\CWShell.js
-		..\..\_Include\CWUtils\Windows\CWXmlHttp.js = ..\..\_Include\CWUtils\Windows\CWXmlHttp.js
+		..\..\..\_Include\CWUtils\JScript\Windows\CWFile.js = ..\..\..\_Include\CWUtils\JScript\Windows\CWFile.js
+		..\..\..\_Include\CWUtils\JScript\Windows\CWHash.js = ..\..\..\_Include\CWUtils\JScript\Windows\CWHash.js
+		..\..\..\_Include\CWUtils\JScript\Windows\CWShell.js = ..\..\..\_Include\CWUtils\JScript\Windows\CWShell.js
+		..\..\..\_Include\CWUtils\JScript\Windows\CWXmlHttp.js = ..\..\..\_Include\CWUtils\JScript\Windows\CWXmlHttp.js
 		Diff.js = Diff.js
 		FixOffset.js = FixOffset.js
 		Main.bat = Main.bat
